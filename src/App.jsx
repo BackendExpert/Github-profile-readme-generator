@@ -35,9 +35,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <div
-      className={`fixed top-0 w-full z-50 transition-transform duration-300 ${
-        showNavBar ? "translate-y-0" : "-translate-y-full"
-      } `}
+        className={`fixed top-0 w-full z-50 transition-transform duration-300 ${
+          showNavBar ? "translate-y-0" : "-translate-y-full"
+        } `}
       >
         <Nav />
       </div>
