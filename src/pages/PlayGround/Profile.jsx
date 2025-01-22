@@ -52,10 +52,10 @@ const Profile = () => {
             </p>
             <CustomBtn 
                 type={'button'}
-                py={'py-2'}
+                py={'py-1'}
                 px={'px-4'}
                 bgColor={'bg-red-600'}
-                btnvalue={'Find'}
+                btnvalue={'Clear'}
                 onClick={headleClear}
             />
         </center>
