@@ -1,24 +1,33 @@
 import React from 'react'
 import { TfiGithub } from "react-icons/tfi";
 import DefaultBtn from '../../components/Buttons/DefaultBtn';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <div className='max-h-screen'>
         <div className="relative min-h-screen w-auto bg-[url(https://wallpapercave.com/wp/wp2370512.jpg)] bg-cover bg-center">
             <div className="absolute inset-0 bg-black opacity-40"></div> 
-            <div className="relative py-[10%] z-20">
+            <div className="relative md:py-[10%] py-[20%] z-20">
+                <div className="md:hidden block text-center text-white ">
+                    this is not mobile Responsive
+                </div>
                 <center>
                     <TfiGithub className='h-32 w-auto fill-white'/>
 
                     <div className="mt-4 text-white">
+                        <p className="my-4">
+                            Currently : <a href="">v1.0.0-beta-1</a>
+                        </p>
                         <h1 className="text-3xl font-semibold">GitHub Profile Readme Generator</h1>
                         <p className="">
                             Create you Github Readme file from here
                         </p>
 
                         <div className="my-4">
-                            <DefaultBtn type={'button'} btnvalue={'Create Readme'}/>
+                            <Link to={'/PlayGround'}>
+                                <DefaultBtn type={'button'} btnvalue={'Create Readme'}/>
+                            </Link>
                         </div>
                     </div>
 
