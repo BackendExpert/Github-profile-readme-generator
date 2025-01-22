@@ -39,6 +39,10 @@ const Home = () => {
                     <div className="my-4 text-white">
                         Developed and maintained by <a href="https://github.com/BackendExpert" target='_blank' className='text-blue-500'>JehanKandy</a>
                     </div>
+
+                    <div className="my-4 text-white">
+                        This Project is licensed under <a href="https://github.com/BackendExpert" target='_blank' className='text-blue-500'>MIT License</a>
+                    </div>
                 </center>
             </div>
         </div>
