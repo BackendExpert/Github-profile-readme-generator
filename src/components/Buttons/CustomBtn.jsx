@@ -5,7 +5,7 @@ const CustomBtn = ({ type, bgColor, py, onClick, btnvalue }) => {
     <button
         className={
             `
-            px-4
+            px-2
             ${bgColor} ${py}
             rounded
             text-white
