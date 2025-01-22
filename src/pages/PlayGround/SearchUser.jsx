@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CustomBtn from '../../components/Buttons/CustomBtn';
+import axios from 'axios';
 
 
 const SearchUser = () => {
@@ -15,10 +16,14 @@ const SearchUser = () => {
         }));
     };
 
-    const headlesubmit = (e) => {
+    const headlesubmit = async (e) => {
         e.preventDefault()
         try{
-
+            const res = await axios.get(import.meta.env.VITE_APP_API + '/user/' +  gitusername)
+            .then(res => {
+                localStorage.setItem(res, "user")
+            })
+            .catch(err => console.log(err))
         }
         catch(err){
             console.log(err)
