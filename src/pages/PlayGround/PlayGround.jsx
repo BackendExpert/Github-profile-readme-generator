@@ -1,67 +1,22 @@
 import React, { useState } from 'react'
-import CustomBtn from '../../components/Buttons/CustomBtn';
+import SearchUser from './SearchUser';
+import Profile from './Profile';
+import FeatureList from './FeatureList';
 
 const PlayGround = () => {
-    const [gitusername, setgitusername] = useState({
-        username: ''
-    })
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setsignindata((prevData) => ({
-          ...prevData,
-          [name]: value
-        }));
-    };
-
-    const headlesubmit = (e) => {
-        e.preventDefault()
-        try{
-
-        }
-        catch(err){
-            console.log(err)
-        }
-    }
 
   return (
-    <div className='pt-24 px-20'>
-        <div className="flex">
-            <div className="w-1/4 mr-2">
-                <div className="">
-                    <form onSubmit={headlesubmit} method="post">
-                        <div className="flex">
-                            <div className="">
-                                <input
-                                    type="text"
-                                    name="username"
-                                    value={gitusername.username}
-                                    placeholder='Github Username'
-                                    required
-                                    onChange={handleInputChange}
-                                    className='
-                                        pl-2
-                                        w-full
-                                        h-10
-                                        bg-gray-100
-                                        border border-gray-200
-                                    '    
-                                />
-                            </div>
-
-                            <div className="ml-2">
-                                <CustomBtn 
-                                    type={'submit'}
-                                    py={'py-2'}
-                                    bgColor={'bg-green-600'}
-                                    btnvalue={'Find'}
-                                />
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <div className='pt-24 md:px-20'>
+        <div className="md:flex">
+            <div className="md:w-1/4 md:mr-2">
+                <SearchUser />
+                <hr className='my-2'/>
+                <Profile />
+                <hr className='my-2'/>
+                <FeatureList />
             </div>
-            <div className="w-full ml-2">
+            <div className="w-full md:ml-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum libero saepe veritatis modi asperiores. Saepe quas amet est, minima eum expedita aliquid porro ratione officiis nobis unde ad corrupti praesentium?
             </div>
         </div>

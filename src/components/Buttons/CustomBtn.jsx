@@ -1,12 +1,11 @@
 import React from 'react'
 
-const CustomBtn = ({ type, bgColor, py, onClick, btnvalue }) => {
+const CustomBtn = ({ type, bgColor, py, onClick, btnvalue, px }) => {
   return (
     <button
         className={
             `
-            px-2
-            ${bgColor} ${py}
+            ${bgColor} ${py} ${px}
             rounded
             text-white
             `
