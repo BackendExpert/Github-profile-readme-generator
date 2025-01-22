@@ -8,11 +8,6 @@ const Profile = () => {
     const usertoken = localStorage.getItem('user')
     const [userdata, setuserdata] = useState([])
 
-    // useEffect(() => {
-    //     axios.get(import.meta.env.VITE_APP_API + '/users/' + usertoken)
-    //     .then(res => setuserdata(res.data))
-    //     .catch(err => console.log(err))
-    // }, [])
 
     useEffect(() => {
         if (usertoken) {

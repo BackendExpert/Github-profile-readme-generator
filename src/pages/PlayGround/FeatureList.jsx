@@ -1,19 +1,6 @@
 import React, { useState } from 'react'
 
-const FeatureList = () => {
-    const [featureData, setfeatureData] = useState({
-        followers: false,
-        followings: false,
-    })
-
-    const handleInputChange = (e) => {
-        const { name, checked } = e.target; // Use `checked` for checkboxes
-        setfeatureData((prevData) => ({
-          ...prevData,
-          [name]: checked, // Update state based on the checkbox state
-        }));
-    };
-
+const FeatureList = ({ featureData, onInputChange }) => {
   return (
     <div>
         <h1 className="text-gray-500 font-semibold">Features</h1>
@@ -25,9 +12,8 @@ const FeatureList = () => {
                             type="checkbox"
                             name="followers"
                             checked={featureData.followers}
-                            onChange={handleInputChange}
-                            // className="mr-2"
-                            className="mr-2 checked:bg-green-500"
+                            onChange={onInputChange}
+                            className="mr-2"
                         />
                         <span className='text-gray-500'>Followers</span>
                     </label>
@@ -39,7 +25,7 @@ const FeatureList = () => {
                             type="checkbox"
                             name="followings"
                             checked={featureData.followings}
-                            onChange={handleInputChange}
+                            onChange={onInputChange}
                             className="mr-2"
                         />
                         <span className='text-gray-500'>Followings</span>
