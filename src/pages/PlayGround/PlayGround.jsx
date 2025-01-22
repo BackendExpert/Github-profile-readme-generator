@@ -7,7 +7,7 @@ const PlayGround = () => {
 
 
   return (
-    <div className='pt-24 md:px-20'>
+    <div className='pt-24 md:px-10'>
         <div className="md:flex">
             <div className="md:w-1/4 md:mr-2">
                 <SearchUser />

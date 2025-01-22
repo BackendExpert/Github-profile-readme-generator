@@ -19,9 +19,10 @@ const SearchUser = () => {
     const headlesubmit = async (e) => {
         e.preventDefault()
         try{
-            const res = await axios.get(import.meta.env.VITE_APP_API + '/user/' +  gitusername)
+            const res = await axios.get(import.meta.env.VITE_APP_API + '/users/' +  gitusername.username)
             .then(res => {
-                localStorage.setItem(res, "user")
+                localStorage.setItem('user', JSON.stringify(res.data))
+                window.location.reload()
             })
             .catch(err => console.log(err))
         }
@@ -29,6 +30,22 @@ const SearchUser = () => {
             console.log(err)
         }
     }
+
+
+    // const headlesubmit = async (e) => {
+    //     e.preventDefault();
+    //     // setError(null); // Clear any previous errors
+    //     try {
+    //       const response = await axios.get(`https://api.github.com/users/${gitusername.username}`);
+
+    //       setgitusername(response.data); // Set the fetched user data
+    //       localStorage.setItem('githubUser', JSON.stringify(response.data)); // Save user data to localStorage
+    //       console.log('User data:', response.data);
+    //     } catch (err) {
+    //       console.error('Error fetching user data:', err);
+    //     //   setError('User not found or an error occurred.');
+    //     }
+    //   };
   return (
     <div className="">
         <form onSubmit={headlesubmit} method="post">
