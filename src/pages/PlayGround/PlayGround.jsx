@@ -38,7 +38,16 @@ const PlayGround = () => {
           console.log('User token is missing. Please log in again.');
         }
     }, [usertoken]);
-    
+
+    const [pubrepos, setpubrepos] = useState([]) 
+
+    useEffect(() => {
+        axios.get(import.meta.env.VITE_APP_API + '/users/' + usertoken + '/' + 'repos?sort=updated&direction=desc')
+        .then(res => setpubrepos(res.data))
+        .catch(err => console.log(err))
+        console.log()
+    }, [])    
+
 
 
   return (
@@ -75,6 +84,24 @@ const PlayGround = () => {
                                     }
                                     {
                                         featureData.repos === false ? <div className=""></div> : <div className="">Public Repositories : {userdata.public_repos}</div>
+                                    }
+
+                                    {
+                                        featureData.repos === false ? <div className=""></div> :
+                                        <div className="">
+                                            <div className="md:grid grid-cols-2 gap-4">
+                                                {
+                                                    pubrepos.map((item, index) => {
+                                                        return (
+                                                            <div className="" key={index}>
+                                                                {item.name}
+                                                            </div>
+                                                        )
+                                                    })
+                                                }
+                                            </div>
+
+                                        </div>
                                     }
                                 </ul>
                             </div>

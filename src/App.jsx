@@ -3,6 +3,7 @@ import Home from "./pages/HomePage/Home";
 import Nav from "./components/Nav/Nav";
 import { useEffect, useState } from "react";
 import PlayGround from "./pages/PlayGround/PlayGround";
+import TEstPG from "./pages/PlayGround/TEstPG";
 
 
 export default function App() {
@@ -44,7 +45,7 @@ export default function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home /> } />
-        <Route path="/PlayGround" element={<PlayGround /> } />
+        <Route path="/PlayGround" element={<TEstPG /> } />
       </Routes>
     </BrowserRouter>
   )
