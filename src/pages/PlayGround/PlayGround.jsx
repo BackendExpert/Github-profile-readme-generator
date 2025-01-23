@@ -73,6 +73,9 @@ const PlayGround = () => {
                                     {
                                         featureData.followings === false ? <div className=""></div> : <div className="">Followings : {userdata.following}</div>
                                     }
+                                    {
+                                        featureData.repos === false ? <div className=""></div> : <div className="">Public Repositories : {userdata.public_repos}</div>
+                                    }
                                 </ul>
                             </div>
                         </div>
