@@ -10,6 +10,7 @@ const PlayGround = () => {
     const [featureData, setfeatureData] = useState({
         followers: false,
         followings: false,
+        repos: false,
     })
     
     const handleInputChange = (e) => {

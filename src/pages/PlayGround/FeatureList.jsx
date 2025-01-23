@@ -31,6 +31,18 @@ const FeatureList = ({ featureData, onInputChange }) => {
                         <span className='text-gray-500'>Followings</span>
                     </label>
                 </div>
+                <div className="mb-2">
+                    <label className="flex items-center">
+                        <input
+                            type="checkbox"
+                            name="repos"
+                            checked={featureData.repos}
+                            onChange={onInputChange}
+                            className="mr-2"
+                        />
+                        <span className='text-gray-500'>Repositories</span>
+                    </label>
+                </div>
             </form>
         </div>
     </div>
